@@ -11,7 +11,7 @@
                 <p>Nama : Khonsadiya Nasywa Salsabila</p>
                 <p>NIM : 20230140112</p>
                 <p>Program Studi : Teknologi Informasi</p>
-                <p>Hobi : (isi hobbimu)</p>
+                <p>Hobi : Menonton Film</p>
             </div>
         </div>
     </div>
