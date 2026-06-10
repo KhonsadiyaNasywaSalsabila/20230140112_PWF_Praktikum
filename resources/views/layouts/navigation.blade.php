@@ -18,6 +18,11 @@
                     <x-nav-link :href="url('/about')" :active="request()->is('about')">
                         {{ __('About') }}
                     </x-nav-link>
+                    @can('manage-product')
+                        <x-nav-link :href="url('/product')" :active="request()->is('product*')">
+                            {{ __('Product') }}
+                        </x-nav-link>
+                    @endcan
                 </div>
             </div>
 
@@ -76,6 +81,11 @@
             <x-responsive-nav-link :href="url('/about')" :active="request()->is('about')">
                 {{ __('About') }}
             </x-responsive-nav-link>
+            @can('manage-product')
+                <x-responsive-nav-link :href="url('/product')" :active="request()->is('product*')">
+                    {{ __('Product') }}
+                </x-responsive-nav-link>
+            @endcan
         </div>
 
         <!-- Responsive Settings Options -->

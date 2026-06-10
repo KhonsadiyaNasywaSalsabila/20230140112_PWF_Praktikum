@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Product;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Gate; // <--- PASTIKAN BARIS INI ADA
 
 class ProductController extends Controller
 {
@@ -47,6 +48,9 @@ class ProductController extends Controller
     {
         $product = Product::findOrFail($id);
 
+        // Menggunakan Gate Facade untuk proteksi
+        Gate::authorize('update', $product);
+
         $validated = $request->validate([
             'name' => 'sometimes|string|max:255',
             'quantity' => 'sometimes|integer',
@@ -61,6 +65,9 @@ class ProductController extends Controller
 
     public function edit(Product $product)
     {
+        // Menggunakan Gate Facade untuk proteksi
+        Gate::authorize('update', $product);
+
         $users = User::orderBy('name')->get();
 
         return view('product.edit', compact('product', 'users'));
@@ -69,6 +76,9 @@ class ProductController extends Controller
     public function delete($id)
     {
         $product = Product::findOrFail($id);
+
+        // Menggunakan Gate Facade untuk proteksi
+        Gate::authorize('delete', $product);
 
         $product->delete();
 
