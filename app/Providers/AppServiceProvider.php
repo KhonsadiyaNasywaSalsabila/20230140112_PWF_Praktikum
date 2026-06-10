@@ -22,5 +22,9 @@ class AppServiceProvider extends ServiceProvider
         });
 
         Gate::policy(Product::class, ProductPolicy::class);
+
+        Gate::define('manage-category', function (User $user) {
+            return $user->role === 'admin';
+        });
     }
 }

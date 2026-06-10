@@ -39,6 +39,16 @@
                             <div class="text-base font-semibold text-gray-900 dark:text-gray-100">{{ $product->name }}</div>
                         </div>
 
+                        {{-- BARIS KATEGORI DITAMBAHKAN DI SINI --}}
+                        <div class="flex items-center px-5 py-4">
+                            <div class="w-32 shrink-0 text-sm text-gray-500 dark:text-gray-400">Category</div>
+                            <div class="text-base font-medium text-gray-900 dark:text-gray-100">
+                                <span class="inline-flex items-center px-2.5 py-0.5 rounded-md text-sm font-medium bg-indigo-50 text-indigo-700 dark:bg-indigo-900/30 dark:text-indigo-300 border border-indigo-200 dark:border-indigo-800">
+                                    {{ $product->category->name ?? 'Uncategorized' }}
+                                </span>
+                            </div>
+                        </div>
+
                         <div class="flex items-center px-5 py-4">
                             <div class="w-32 shrink-0 text-sm text-gray-500 dark:text-gray-400">Quantity</div>
                             <div>

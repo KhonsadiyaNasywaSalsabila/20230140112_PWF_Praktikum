@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Product;
 use App\Models\User;
+use App\Models\Category; // Wajib ditambahkan untuk memanggil data kategori
 use Illuminate\Support\Facades\Gate;
 use App\Http\Requests\StoreProductRequest;
 use App\Http\Requests\UpdateProductRequest; 
@@ -20,11 +21,12 @@ class ProductController extends Controller
     public function create()
     {
         $users = User::orderBy('name')->get();
+        $categories = Category::orderBy('name')->get(); // Ambil data kategori
 
-        return view('product.create', compact('users'));
+        return view('product.create', compact('users', 'categories'));
     }
 
-    // Ubah Request menjadi StoreProductRequest
+    // Menggunakan StoreProductRequest untuk validasi
     public function store(StoreProductRequest $request)
     {
         // Data sudah otomatis tervalidasi oleh StoreProductRequest sebelum masuk ke sini
@@ -48,11 +50,12 @@ class ProductController extends Controller
         Gate::authorize('update', $product);
 
         $users = User::orderBy('name')->get();
+        $categories = Category::orderBy('name')->get(); // Ambil data kategori
 
-        return view('product.edit', compact('product', 'users'));
+        return view('product.edit', compact('product', 'users', 'categories'));
     }
 
-    // Ubah Request menjadi UpdateProductRequest
+    // Menggunakan UpdateProductRequest untuk validasi
     public function update(UpdateProductRequest $request, $id)
     {
         $product = Product::findOrFail($id);

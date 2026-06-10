@@ -25,6 +25,7 @@ class UpdateProductRequest extends FormRequest
             'quantity' => 'sometimes|required|integer|min:0',
             'price' => 'sometimes|required|numeric|min:0',
             'user_id' => 'sometimes|required|exists:users,id',
+            'category_id' => 'sometimes|required|exists:categories,id', // <-- Aturan untuk Kategori
         ];
     }
 
@@ -44,6 +45,8 @@ class UpdateProductRequest extends FormRequest
             'price.min' => 'Harga produk tidak boleh kurang dari 0.',
             'user_id.required' => 'Pemilik produk tidak boleh kosong.',
             'user_id.exists' => 'Pemilik produk yang dipilih tidak valid di sistem.',
+            'category_id.required' => 'Kategori produk tidak boleh kosong.', // <-- Pesan Kategori
+            'category_id.exists' => 'Kategori yang dipilih tidak valid di sistem.', // <-- Pesan Kategori
         ];
     }
 }
