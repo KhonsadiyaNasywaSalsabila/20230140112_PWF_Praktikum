@@ -1,5 +1,5 @@
 # Database pada tabel users (Implementasi Role)
-<img width="1918" height="1079" alt="Screenshot 2026-06-11 001649" src="https://github.com/user-attachments/assets/27879db5-ea83-4660-9296-28bc691eaed7" />
+<img width="1919" height="1004" alt="image" src="https://github.com/user-attachments/assets/d84701a6-77e6-4ff4-b1fc-795cccfb11be" />
 
 # Implementasi Gate
 ## Akun Admin
