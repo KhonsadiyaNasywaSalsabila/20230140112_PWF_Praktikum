@@ -1,9 +1,9 @@
 # Praktikum PWF
-- [Dokumentasi Praktikum 3](https://github.com/KhonsadiyaNasywaSalsabila/20230140112_PWF_Praktikum/tree/13aaeb504ddeb05ac41322deef87d5de34e1805e/Praktikum3_Screenshot)
-- [Dokumentasi Praktikum 5](https://github.com/KhonsadiyaNasywaSalsabila/20230140112_PWF_Praktikum/blob/13aaeb504ddeb05ac41322deef87d5de34e1805e/Praktikum5.md)
-- [Dokumentasi Praktikum 6](https://github.com/KhonsadiyaNasywaSalsabila/20230140112_PWF_Praktikum/blob/13aaeb504ddeb05ac41322deef87d5de34e1805e/Praktikum6.md)
-- [Dokumetasi Praktikum 7](https://github.com/KhonsadiyaNasywaSalsabila/20230140112_PWF_Praktikum/blob/13aaeb504ddeb05ac41322deef87d5de34e1805e/Praktikum7.md)
-- [Dokumentasi UCP1_20230140112](https://github.com/KhonsadiyaNasywaSalsabila/20230140112_PWF_Praktikum/blob/13aaeb504ddeb05ac41322deef87d5de34e1805e/UCP1_20230140112.md)
+### [Dokumentasi Praktikum 3](https://github.com/KhonsadiyaNasywaSalsabila/20230140112_PWF_Praktikum/tree/13aaeb504ddeb05ac41322deef87d5de34e1805e/Praktikum3_Screenshot)
+### [Dokumentasi Praktikum 5](https://github.com/KhonsadiyaNasywaSalsabila/20230140112_PWF_Praktikum/blob/13aaeb504ddeb05ac41322deef87d5de34e1805e/Praktikum5.md)
+### [Dokumentasi Praktikum 6](https://github.com/KhonsadiyaNasywaSalsabila/20230140112_PWF_Praktikum/blob/13aaeb504ddeb05ac41322deef87d5de34e1805e/Praktikum6.md)
+### [Dokumetasi Praktikum 7](https://github.com/KhonsadiyaNasywaSalsabila/20230140112_PWF_Praktikum/blob/13aaeb504ddeb05ac41322deef87d5de34e1805e/Praktikum7.md)
+### [Dokumentasi UCP1_20230140112](https://github.com/KhonsadiyaNasywaSalsabila/20230140112_PWF_Praktikum/blob/13aaeb504ddeb05ac41322deef87d5de34e1805e/UCP1_20230140112.md)
 
 # Praktikum 2 - Laravel Breeze Authentication & About Page
 
