@@ -9,17 +9,9 @@
                             <p class="text-sm text-gray-500 dark:text-gray-400 mt-1">Manage your product inventory</p>
                         </div>
                         
-                        {{-- Tombol Add Product disembunyikan pakai Gate --}}
+                        {{-- Memanggil Component Add Product --}}
                         @can('manage-product')
-                        <a href="{{ route('product.create') }}"
-                           class="inline-flex items-center gap-2 px-4 py-2 bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-medium rounded-lg transition duration-150 shadow-sm">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
-                                stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M12 4v16m8-8H4" />
-                            </svg>
-                            Add Product
-                        </a>
+                            <x-add-product :url="route('product.create')" name="Product" />
                         @endcan
                     </div>
 
@@ -78,6 +70,7 @@
                                         </td>
                                         <td class="px-6 py-4">
                                             <div class="flex items-center justify-center gap-2">
+                                                {{-- Tombol View tetap manual karena tidak dibuat Component-nya --}}
                                                 <a href="{{ route('product.show', $product->id) }}"
                                                     class="p-1.5 rounded-md text-gray-400 hover:text-indigo-600 hover:bg-indigo-50 dark:hover:bg-indigo-900/50 transition"
                                                     title="View">
@@ -91,36 +84,14 @@
                                                     </svg>
                                                 </a>
                                                 
+                                                {{-- Memanggil Component Edit Button --}}
                                                 @can('update', $product)
-                                                <a href="{{ route('product.edit', $product) }}"
-                                                    class="p-1.5 rounded-md text-gray-400 hover:text-amber-600 hover:bg-amber-50 dark:hover:bg-amber-900/50 transition"
-                                                    title="Edit">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5"
-                                                        fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                        <path stroke-linecap="round" stroke-linejoin="round"
-                                                            stroke-width="2"
-                                                            d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
-                                                    </svg>
-                                                </a>
+                                                    <x-edit-button :url="route('product.edit', $product)" />
                                                 @endcan
 
+                                                {{-- Memanggil Component Delete Button --}}
                                                 @can('delete', $product)
-                                                <form action="{{ route('product.delete', $product->id) }}" method="POST"
-                                                    onsubmit="return confirm('Delete this product?');"
-                                                    class="inline">
-                                                    @csrf
-                                                    @method('DELETE')
-                                                    <button type="submit"
-                                                        class="p-1.5 rounded-md text-gray-400 hover:text-red-600 hover:bg-red-50 dark:hover:bg-red-900/50 transition"
-                                                        title="Delete">
-                                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5"
-                                                            fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                            <path stroke-linecap="round" stroke-linejoin="round"
-                                                                stroke-width="2"
-                                                                d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
-                                                        </svg>
-                                                    </button>
-                                                </form>
+                                                    <x-delete-button :action="route('product.delete', $product->id)" />
                                                 @endcan
                                             </div>
                                         </td>
